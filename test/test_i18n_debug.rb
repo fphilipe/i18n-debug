@@ -28,7 +28,7 @@ class TestI18nDebug < Minitest::Test
   def test_custom_lookup_hook_called
     default_hook = I18n::Debug.on_lookup
     hook_key, hook_value = nil
-    I18n::Debug.on_lookup = lambda do |key, value|
+    I18n::Debug.on_lookup do |key, value|
       hook_key, hook_value = key, value
     end
 

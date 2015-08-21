@@ -57,7 +57,7 @@ totally different, simply set your own handler to do so:
 # Collect stats on I18n key usage.
 i18n_stats = Hash.new { |stats, key| stats[key] = 0 }
 
-I18n::Debug.on_lookup = lambda do |key, value|
+I18n::Debug.on_lookup do |key, value|
   i18n_stats[key] += 1 if value
 end
 ```

@@ -8,7 +8,8 @@ module I18n
     end
 
     class << self
-      attr_accessor :logger, :on_lookup
+      attr_accessor :logger
+      attr_writer :on_lookup
 
       def logger
         @logger ||=
@@ -18,6 +19,11 @@ module I18n
             require 'logger'
             ::Logger.new($stdout)
           end
+      end
+
+      def on_lookup(&blk)
+        return @on_lookup unless block_given?
+        self.on_lookup = blk
       end
     end
 
