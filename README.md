@@ -1,5 +1,8 @@
 # Ruby I18n Debug
 
+[![Build Status][build-image]][build-link]
+[![Gem Version][gem-image]][gem-link]
+
 **Ever wondered which translations are being looked up by Rails, a gem, or
 simply your app? Wonder no more!**
 
@@ -75,3 +78,8 @@ Philipe Fatio ([fphilipe](https://github.com/fphilipe))
 ### License
 
 MIT License. Copyright 2014 Philipe Fatio
+
+[build-image]: https://travis-ci.org/fphilipe/i18n-debug.svg
+[build-link]:  https://travis-ci.org/fphilipe/i18n-debug
+[gem-image]:   https://badge.fury.io/rb/i18n-debug.svg
+[gem-link]:    https://rubygems.org/gems/i18n-debug
