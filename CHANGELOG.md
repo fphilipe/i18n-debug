@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.1.1
 
 - Update i18n version
 - Make Rails logger check more robust
