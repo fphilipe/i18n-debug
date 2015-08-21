@@ -12,5 +12,8 @@ Gem::Specification.new do |spec|
   spec.summary     = %q{Ever wondered which translations are being looked up by Rails, a gem, or simply your app? Wonder no more!}
   spec.description = spec.summary
 
-  spec.add_dependency 'i18n', '~> 0.0'
+  spec.add_development_dependency 'bundler', '~> 1.7'
+  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'minitest', '~> 5.8'
+  spec.add_dependency 'i18n', '< 1'
 end
