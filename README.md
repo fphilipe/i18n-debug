@@ -36,6 +36,8 @@ Thus, place it inside the `development` group.
 gem 'i18n-debug', group: :development
 ```
 
+If you need support for ruby < 2, make sure to use version 1.0.0.
+
 ## Usage
 
 This gem works straight out of the box. If Rails is available, it will log using
