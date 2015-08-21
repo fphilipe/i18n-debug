@@ -1,4 +1,4 @@
-require_relative 'lib/i18n/debug/version'
+require File.expand_path('../lib/i18n/debug/version', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name        = 'i18n-debug'
