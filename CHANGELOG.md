@@ -1,6 +1,6 @@
 # Changelog
 
-# HEAD
+# 1.2.0
 
 - Don't change method visibility of `#lookup` (#8, @aleksandrs-ledovskis)
 
