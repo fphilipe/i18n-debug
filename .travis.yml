@@ -4,5 +4,5 @@ cache: bundler
 script: "bundle exec rake test"
 rvm:
   - 2.2.2
-  - jruby-19mode
+  - jruby-9.0.0.0
   - rbx-2
