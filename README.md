@@ -36,7 +36,7 @@ Thus, place it inside the `development` group.
 gem 'i18n-debug', group: :development
 ```
 
-If you need support for ruby < 2, make sure to use version 1.0.0.
+If you need support for ruby <= 2.0, make sure to use version 1.0.0.
 
 ## Usage
 
