@@ -3,13 +3,12 @@ require 'i18n/debug/version'
 
 module I18n
   module Debug
-    @on_lookup = lambda do |key, result|
+    ON_LOOKUP_DEFAULT = lambda do |key, result|
       logger.debug("[i18n-debug] #{key} => #{result.inspect}")
     end
 
     class << self
       attr_accessor :logger
-      attr_writer :on_lookup
 
       def logger
         @logger ||=
@@ -22,8 +21,15 @@ module I18n
       end
 
       def on_lookup(&blk)
-        return @on_lookup unless block_given?
-        self.on_lookup = blk
+        if block_given?
+          Thread.current[:i18n_debug_on_lookup] = blk
+        else
+          Thread.current[:i18n_debug_on_lookup] || ON_LOOKUP_DEFAULT
+        end
+      end
+
+      def on_lookup=(blk)
+        Thread.current[:i18n_debug_on_lookup] = blk
       end
     end
 
