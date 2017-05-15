@@ -3,6 +3,4 @@ language: ruby
 cache: bundler
 script: "bundle exec rake test"
 rvm:
-  - 2.2.2
-  - jruby-9.0.0.0
-  - rbx-2
+  - 2.4.1
