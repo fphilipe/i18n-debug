@@ -66,8 +66,8 @@ end
 
 ## Additional Information
 
-This gem was inspired by a similar gem called
-[rails-i18n-debug](https://github.com/256dpi/rails-i18n-debug).
+This gem was inspired by a similar (but already deprecated and unavailable) gem called
+[rails-i18n-debug](https://github.com/256dpi/rails-i18n-debug). 
 
 ### Dependencies
 
