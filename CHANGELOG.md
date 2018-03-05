@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update i18n version
 - Make Rails logger check more robust
 
 ## 1.1.0
