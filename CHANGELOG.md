@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Make Rails logger check more robust
+
 ## 1.1.0
 
 - Use `Module#prepend` instead of aliasing methods.
