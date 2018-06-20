@@ -28,6 +28,8 @@ module I18n
     end
 
     module Hook
+      protected
+
       def lookup(*args)
         super.tap do |result|
           options = args.last.is_a?(Hash) ? args.pop : {}
