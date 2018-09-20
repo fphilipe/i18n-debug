@@ -64,6 +64,22 @@ I18n::Debug.on_lookup do |key, value|
 end
 ```
 
+### Conditional Logging
+
+In some situations you might want to only conditionally turn on logging, this can be done easily via a `before_action` by swapping in a Null Output logger. The logic is left up to the user, but here is an example:
+
+```
+  before_action :enable_i18n_debug
+
+  private def enable_i18n_debug
+    if params.key?(:i18n_debug)
+      I18n::Debug.logger = Rails.logger
+    else
+      I18n::Debug.logger = Logger.new("/dev/null")
+    end
+  end
+```
+
 ## Additional Information
 
 ### Dependencies
