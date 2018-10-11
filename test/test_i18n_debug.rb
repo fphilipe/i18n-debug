@@ -19,6 +19,10 @@ class TestI18nDebug < Minitest::Test
     end
   end
 
+  def test_does_not_alter_default_i18n_lookup_method_visibility
+    assert I18n.backend.class.protected_method_defined?(:lookup)
+  end
+
   def test_logger_invoked
     assert_output(/en\.foo\.bar => "baz"/) do
       I18n.t('foo.bar')
