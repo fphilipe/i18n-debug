@@ -1,5 +1,9 @@
 # Changelog
 
+# HEAD
+
+- Don't change method visibility of `#lookup` (#8, @aleksandrs-ledovskis)
+
 ## 1.1.1
 
 - Update i18n version
