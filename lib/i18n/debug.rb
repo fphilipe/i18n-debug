@@ -13,7 +13,7 @@ module I18n
 
       def logger
         @logger ||=
-          if defined?(::Rails) and ::Rails.respond_to?(:logger)
+          if defined?(::Rails) && ::Rails.respond_to?(:logger) && ::Rails.logger.present?
             ::Rails.logger
           else
             require 'logger'
