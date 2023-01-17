@@ -41,5 +41,5 @@ module I18n
     end
   end
 
-  Backend::Simple.prepend(Debug::Hook)
+  Backend::Simple.include(Debug::Hook) unless ENV["DISABLE_I18N_DEBUG"]
 end
